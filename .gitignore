@@ -30,3 +30,8 @@
 *.exe
 *.out
 *.app
+/practice_code/.vs/practice_code
+/practice_code/Debug
+/practice_code/practice_code/x64/Debug
+/practice_code/practice_code/Debug
+*.user
