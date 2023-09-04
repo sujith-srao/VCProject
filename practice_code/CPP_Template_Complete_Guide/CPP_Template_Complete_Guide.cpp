@@ -8,7 +8,72 @@
 #include<algorithm>
 #include<list>
 #include<array>
+#include"meta_power_3.h"
+#include "types.h"
+#include "My_Ref_Counted_Ptr.h"
+#include "Static_Polymorph.h"
+#include "Duos.h"
+#include"Maven_sample_prob.h"
 using namespace std;
+void driver_types() {
+    struct S{};
+    cout << "Is fundamental wchar_t" << IsFunda<wchar_t>::Yes << endl;
+    cout << "Is fundamental int " << IsFunda<int>::Yes << endl;
+    cout << "Is fundamental float" << IsFunda<float>::Yes << endl;
+    cout << "Is fundamental struct" << IsFunda<S>::Yes << endl;
+    vector<int> vi;
+    vi.push_back(10);
+}
+
+void driver_Static_porlymorph() {
+    //Shape<Rectangle> r(new Rectangle);
+    //r.draw();
+    //r.num_of_sides();
+
+    //Shape<Circle> rC(new Circle);
+    //rC.draw();
+    //rC.num_of_sides();
+}
+
+void driver_Duos() {
+    //Duos<int, double> dd1;
+    //Duos<double, int> dd2;
+    //dd2 = dd1;
+
+    //Duos<int, Duos<char, int>> dici;
+
+    //cout << "Type of 2nd type::"<<typeid() << endl;
+}
+
+void Maven_sample_prob() {
+    
+    //cout << "Type of Reverse: " << typeid(Rev_Base <Base_m1<double>>::Type).name() << endl;
+    //cout << "Type of T : " << typeid(Base_m1<double>).name() << endl;;
+    //cout << "Type of Reverse: " << typeid(Rev_Base <tuple<int,double>>::Type).name() << endl;
+    //cout << "Type of T : " << typeid(tuple<double,int>).name() << endl;;
+    //tuple<int, double> d;
+    //get<1>(d);
+
+    tuple<int, double> d;
+    //cout << "Type of Reverse: " << typeid(Rev_Base <tuple<double>>::FirstT).name() << endl;
+    //cout << "Result of mult::"<<MyMult<4, 5>::result << endl;
+    
+}
+void driver_ref_count() {
+    /*RefCountedPtr<string> s1(new string("Hello"));
+    {
+        RefCountedPtr<string> s2(s1);
+        {
+            RefCountedPtr<string> s3(new string("world"));
+            s3 = s1;
+        }
+    }*/
+}
+void p3() {
+    Power_Of_3<5> p;
+    std::cout << "3 power 5=" << p.result << endl;
+}
+
 template <typename T,typename CONT>
 void fillCont(CONT &cont, T const& val) {
     typename CONT::iterator pos(cont.begin());
@@ -277,6 +342,20 @@ namespace CheckClass {
         //enum { No = !Yes; };
     };
 }
+namespace CPP_15_3{
+
+    /*template<typename T>
+    class CSMTraits :public BitORCSM<T, bool>;
+
+    template<typename T>
+    class CSMTraits :public BitORCSM<T, true> {
+    public:
+        typedef typename 
+    };*/
+
+}
+
+
 namespace CPP15_3_1 {
     template <bool C,typename T1,typename T2>
     class IFTHENELSE;
@@ -314,8 +393,8 @@ namespace CPP15_3_1 {
     }
 }
 namespace CPP15_2_4{
-    template <typename T, int N>
-    std::array<T, N> operator+(std::array<T, N>& lhs, std::array<T, N>& rhs);
+    //template <typename T, int N>
+    //std::array<T, N> operator+(std::array<T, N>& lhs, std::array<T, N>& rhs);
 
     /*template <typename T, int N>
     std::array<T, N> operator+(std::array<T, N>& lhs, std::array<T, N>& rhs) {
@@ -350,13 +429,13 @@ namespace CPP15_2_4{
     void driver() {
         std::array<int, 5> a1{ 1,2,3,4,5 };
         std::array<int, 5> a2{ 10,20,30,40,50 };
-        std::array<int, 5> a3 = a1 + a2;
+        /*std::array<int, 5> a3 = a1 + a2;
         std::array<float, 5> f1{ 1,2,3,4,5 };
         std::array<float, 5> f2{ 10,20,30,40,50 };
         std::array<float, 5> f3 = f1 + f2;
         std::array<MyClass, 5> m1{ 1,2,3,4,5 };
         std::array<MyClass, 5> m2{ 10,20,30,40,50 };
-        std::array<MyClass, 5> m3 = m1 + m2;
+        std::array<MyClass, 5> m3 = m1 + m2;*/
 
     }
 
@@ -550,7 +629,7 @@ namespace GET_MAX_OF_CONTAINER {
 template<template <typename T> typename T2>
 void f2() {
     double d = 3;
-    double d2 = my_cast<double>('a');
+    //double d2 = my_cast<double>('a');
 }
 template<template <typename T> typename T2> 
 void df() {
@@ -559,12 +638,46 @@ void df() {
     Base* dp2 = new Dervied2;
     //func(bp,dp1);
 }
-class C {};
+template<typename T1,typename T2>
+class MyCC {
+public:
+    T1 a_;
+    T2 b_;
+    MyCC(T1 a, T2 b) :a_(a), b_(b) {};
+};
+class Empty {
+public:
+    typedef int X;
+};
+class EmptyToo : public Empty{
+public:
+
+};
+class EmptyThree : public Empty,public EmptyToo {
+public:
+
+};
 //struct C{};
 //union C{};
 int C = 0;
 int main()
 {
+    Maven_sample_prob();
+    //driver_types();
+    return 0;
+    p3();
+    Empty e;
+    cout << "Size of Empty class" << sizeof(Empty)<<endl;
+    cout << "Size of Empty class" << sizeof(EmptyToo) << endl;
+    cout << "Size of Empty class" << sizeof(EmptyThree)<<endl;
+
+    MyCC<int, int> *cc1 = new MyCC<int,int>(4,5);
+    MyCC<int, float> *cc2 = new MyCC<int,float>(4,5.0);
+    MyCC<int, char> *cc3 = new MyCC<int,char>(4,'b');
+    MyCC<double, int> *cc4 = new MyCC<double,int>(4,5);
+    MyCC<int,double> *cc5 = new MyCC<int,double>(4,5.5);
+    
+    return 0;
     OVERFLOW_SAMPLE::driver();
     return 0;
     int i;

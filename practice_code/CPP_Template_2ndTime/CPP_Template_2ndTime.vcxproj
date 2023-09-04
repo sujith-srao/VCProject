@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{0f190eb5-8cc4-49d2-aeab-4d08a8e47ea5}</ProjectGuid>
-    <RootNamespace>CPPTemplateCompleteGuide</RootNamespace>
+    <ProjectGuid>{f47bfdf6-0fee-448d-bd32-01c757b1f5c1}</ProjectGuid>
+    <RootNamespace>CPPTemplate2ndTime</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -76,6 +76,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -127,22 +128,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CPP_Template_Complete_Guide.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="CFTP.h" />
-    <ClInclude Include="Duos.h" />
-    <ClInclude Include="Duos2.h" />
-    <ClInclude Include="Holder.h" />
-    <ClInclude Include="Maven_sample_prob.h" />
-    <ClInclude Include="max.h" />
-    <ClInclude Include="meta_power_3.h" />
-    <ClInclude Include="meta_sqrt.h" />
-    <ClInclude Include="My_Ref_Counted_Ptr.h" />
-    <ClInclude Include="rparam.h" />
-    <ClInclude Include="Static_Polymorph.h" />
-    <ClInclude Include="types.h" />
-    <ClInclude Include="Types2.h" />
+    <ClCompile Include="CPP_Template_2ndTime.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

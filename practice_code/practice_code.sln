@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2046
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32519.379
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "practice_code", "practice_code\practice_code.vcxproj", "{68DB1E58-AFD4-4B26-9710-F6B948819A14}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CPP_Template_Complete_Guide", "CPP_Template_Complete_Guide\CPP_Template_Complete_Guide.vcxproj", "{0F190EB5-8CC4-49D2-AEAB-4D08A8E47EA5}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CPP_Template_2ndTime", "CPP_Template_2ndTime\CPP_Template_2ndTime.vcxproj", "{F47BFDF6-0FEE-448D-BD32-01C757B1F5C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,22 @@ Global
 		{68DB1E58-AFD4-4B26-9710-F6B948819A14}.Release|x64.Build.0 = Release|x64
 		{68DB1E58-AFD4-4B26-9710-F6B948819A14}.Release|x86.ActiveCfg = Release|Win32
 		{68DB1E58-AFD4-4B26-9710-F6B948819A14}.Release|x86.Build.0 = Release|Win32
+		{0F190EB5-8CC4-49D2-AEAB-4D08A8E47EA5}.Debug|x64.ActiveCfg = Debug|x64
+		{0F190EB5-8CC4-49D2-AEAB-4D08A8E47EA5}.Debug|x64.Build.0 = Debug|x64
+		{0F190EB5-8CC4-49D2-AEAB-4D08A8E47EA5}.Debug|x86.ActiveCfg = Debug|Win32
+		{0F190EB5-8CC4-49D2-AEAB-4D08A8E47EA5}.Debug|x86.Build.0 = Debug|Win32
+		{0F190EB5-8CC4-49D2-AEAB-4D08A8E47EA5}.Release|x64.ActiveCfg = Release|x64
+		{0F190EB5-8CC4-49D2-AEAB-4D08A8E47EA5}.Release|x64.Build.0 = Release|x64
+		{0F190EB5-8CC4-49D2-AEAB-4D08A8E47EA5}.Release|x86.ActiveCfg = Release|Win32
+		{0F190EB5-8CC4-49D2-AEAB-4D08A8E47EA5}.Release|x86.Build.0 = Release|Win32
+		{F47BFDF6-0FEE-448D-BD32-01C757B1F5C1}.Debug|x64.ActiveCfg = Debug|x64
+		{F47BFDF6-0FEE-448D-BD32-01C757B1F5C1}.Debug|x64.Build.0 = Debug|x64
+		{F47BFDF6-0FEE-448D-BD32-01C757B1F5C1}.Debug|x86.ActiveCfg = Debug|Win32
+		{F47BFDF6-0FEE-448D-BD32-01C757B1F5C1}.Debug|x86.Build.0 = Debug|Win32
+		{F47BFDF6-0FEE-448D-BD32-01C757B1F5C1}.Release|x64.ActiveCfg = Release|x64
+		{F47BFDF6-0FEE-448D-BD32-01C757B1F5C1}.Release|x64.Build.0 = Release|x64
+		{F47BFDF6-0FEE-448D-BD32-01C757B1F5C1}.Release|x86.ActiveCfg = Release|Win32
+		{F47BFDF6-0FEE-448D-BD32-01C757B1F5C1}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

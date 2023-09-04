@@ -1,0 +1,5 @@
+pch.cpp
+pch.c
+practice_code.vcxproj.user
+Debug/
+x64/
